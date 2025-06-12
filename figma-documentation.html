@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação Figma - Centro Lumi | Guia Completo de Recriação</title>
+    <meta name="description" content="Guia completo para recriar o design do Centro Lumi no Figma, incluindo componentes, estilos, layouts e especificações técnicas.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-lumi-blue-dark rounded">
+                        <div class="w-10 h-10 bg-lumi-blue-dark rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">CL</span>
+                        </div>
+                        <span class="ml-3 text-xl font-semibold text-lumi-blue-dark">Centro Lumi</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Sobre</a>
+                        <a href="services.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Serviços</a>
+                        <a href="figma-documentation.html" class="px-3 py-2 rounded-md bg-lumi-blue-light text-lumi-blue-dark font-medium">Figma</a>
+                        <a href="contact.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Contato</a>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons - Desktop -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <button class="btn btn-ghost text-lumi-blue-dark hover:bg-lumi-gray-neutral">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        Ligar
+                    </button>
+                    <a href="https://wa.me/5511987654321" target="_blank" class="btn bg-lumi-green-soft text-lumi-blue-dark hover:bg-green-200 px-4 py-2 min-h-[48px]">
+                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="btn btn-ghost text-lumi-blue-dark p-2 min-h-[48px] min-w-[48px]">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-12 bg-gradient-to-br from-lumi-blue-light/10 to-lumi-green-soft/10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-6">
+                    <div class="badge bg-lumi-blue-light text-lumi-blue-dark">
+                        <i data-lucide="figma" class="w-4 h-4 mr-2"></i>
+                        Documentação Figma
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold text-lumi-blue-dark leading-tight">
+                        Guia Completo para Figma
+                    </h1>
+
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        Instruções detalhadas para recriar todo o design system e páginas do 
+                        Centro Lumi no Figma, incluindo componentes, variáveis, estilos e layouts responsivos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="py-8 bg-white border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold text-lumi-blue-dark mb-6">Índice</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="#setup" class="block p-4 rounded-lg border border-gray-200 hover:bg-lumi-gray-neutral/50 transition-colors">
+                        <h3 class="font-semibold text-lumi-blue-dark">1. Configuração Inicial</h3>
+                        <p class="text-sm text-gray-600">Preparando o arquivo Figma</p>
+                    </a>
+                    <a href="#design-tokens" class="block p-4 rounded-lg border border-gray-200 hover:bg-lumi-gray-neutral/50 transition-colors">
+                        <h3 class="font-semibold text-lumi-blue-dark">2. Design Tokens</h3>
+                        <p class="text-sm text-gray-600">Cores, tipografia e espaçamento</p>
+                    </a>
+                    <a href="#components" class="block p-4 rounded-lg border border-gray-200 hover:bg-lumi-gray-neutral/50 transition-colors">
+                        <h3 class="font-semibold text-lumi-blue-dark">3. Componentes</h3>
+                        <p class="text-sm text-gray-600">Biblioteca de componentes</p>
+                    </a>
+                    <a href="#layouts" class="block p-4 rounded-lg border border-gray-200 hover:bg-lumi-gray-neutral/50 transition-colors">
+                        <h3 class="font-semibold text-lumi-blue-dark">4. Layouts</h3>
+                        <p class="text-sm text-gray-600">Estrutura das páginas</p>
+                    </a>
+                    <a href="#responsive" class="block p-4 rounded-lg border border-gray-200 hover:bg-lumi-gray-neutral/50 transition-colors">
+                        <h3 class="font-semibold text-lumi-blue-dark">5. Responsividade</h3>
+                        <p class="text-sm text-gray-600">Breakpoints e adaptações</p>
+                    </a>
+                    <a href="#export" class="block p-4 rounded-lg border border-gray-200 hover:bg-lumi-gray-neutral/50 transition-colors">
+                        <h3 class="font-semibold text-lumi-blue-dark">6. Exportação</h3>
+                        <p class="text-sm text-gray-600">Assets e especificações</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Section -->
+        <section id="setup" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">1. Configuração Inicial</h2>
+                
+                <div class="space-y-8">
+                    <div class="card bg-lumi-blue-light/10 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-4">Preparando o Arquivo</h3>
+                        <ol class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="w-6 h-6 bg-lumi-blue-dark text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">1</span>
+                                <div>
+                                    <strong>Criar novo arquivo:</strong> Nome do arquivo: "Centro Lumi - Design System"
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-6 h-6 bg-lumi-blue-dark text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">2</span>
+                                <div>
+                                    <strong>Estrutura de páginas:</strong>
+                                    <ul class="mt-2 ml-4 space-y-1 text-sm">
+                                        <li>• 🎨 Design System</li>
+                                        <li>• 🧩 Components</li>
+                                        <li>• 🏠 Homepage</li>
+                                        <li>• 📄 Páginas Internas</li>
+                                        <li>• 📱 Mobile Layouts</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-6 h-6 bg-lumi-blue-dark text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">3</span>
+                                <div>
+                                    <strong>Grid Layout:</strong> Configurar grid de 12 colunas com 24px de gutter e margins de 120px (desktop)
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-4">Configuração de Frames</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="border border-gray-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-lumi-blue-dark mb-2">Desktop</h4>
+                                <p class="text-sm text-gray-600 mb-2">1440px x 1024px+</p>
+                                <p class="text-xs text-gray-500">Container máximo: 1280px</p>
+                            </div>
+                            <div class="border border-gray-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-lumi-blue-dark mb-2">Tablet</h4>
+                                <p class="text-sm text-gray-600 mb-2">768px x 1024px</p>
+                                <p class="text-xs text-gray-500">8 colunas de grid</p>
+                            </div>
+                            <div class="border border-gray-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-lumi-blue-dark mb-2">Mobile</h4>
+                                <p class="text-sm text-gray-600 mb-2">375px x 812px</p>
+                                <p class="text-xs text-gray-500">4 colunas de grid</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Tokens Section -->
+        <section id="design-tokens" class="py-20 bg-lumi-gray-neutral">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">2. Design Tokens</h2>
+                
+                <div class="space-y-8">
+                    <!-- Colors -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Variáveis de Cor</h3>
+                        <div class="space-y-4">
+                            <p class="text-gray-700 mb-4">Crie estas variáveis de cor no Figma:</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between p-3 bg-lumi-blue-dark text-white rounded">
+                                        <span>Primary/Blue-Dark</span>
+                                        <code class="text-xs">#005073</code>
+                                    </div>
+                                    <div class="flex items-center justify-between p-3 bg-lumi-blue-light text-lumi-blue-dark rounded">
+                                        <span>Secondary/Blue-Light</span>
+                                        <code class="text-xs">#A2D5F2</code>
+                                    </div>
+                                    <div class="flex items-center justify-between p-3 bg-lumi-green-soft text-lumi-blue-dark rounded">
+                                        <span>Accent/Green-Soft</span>
+                                        <code class="text-xs">#A7D7C5</code>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between p-3 bg-lumi-gray-neutral text-gray-700 rounded border">
+                                        <span>Neutral/Gray-Light</span>
+                                        <code class="text-xs">#F7F7F7</code>
+                                    </div>
+                                    <div class="flex items-center justify-between p-3 bg-white text-gray-700 rounded border">
+                                        <span>Base/White</span>
+                                        <code class="text-xs">#FFFFFF</code>
+                                    </div>
+                                    <div class="flex items-center justify-between p-3 bg-gray-800 text-white rounded">
+                                        <span>Text/Dark</span>
+                                        <code class="text-xs">#333333</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Typography -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Tipografia</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-3">Fontes a Importar</h4>
+                                <div class="bg-gray-100 p-4 rounded-lg">
+                                    <code class="text-sm">
+                                        • Poppins (400, 500, 600, 700)<br>
+                                        • Open Sans (400, 500, 600)
+                                    </code>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-3">Estilos de Texto</h4>
+                                <div class="space-y-3">
+                                    <div class="border border-gray-200 p-4 rounded-lg">
+                                        <h5 style="font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 700; line-height: 1.2; color: var(--lumi-blue-dark);">Heading 1</h5>
+                                        <p class="text-sm text-gray-600">Poppins Bold 40px / Line Height 48px</p>
+                                    </div>
+                                    <div class="border border-gray-200 p-4 rounded-lg">
+                                        <h5 style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 600; line-height: 1.3; color: var(--lumi-blue-dark);">Heading 2</h5>
+                                        <p class="text-sm text-gray-600">Poppins SemiBold 32px / Line Height 40px</p>
+                                    </div>
+                                    <div class="border border-gray-200 p-4 rounded-lg">
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.6;">Body Text</p>
+                                        <p class="text-sm text-gray-600">Open Sans Regular 16px / Line Height 24px</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spacing -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Sistema de Espaçamento</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="text-center">
+                                <div class="w-4 h-4 bg-lumi-blue-dark mx-auto mb-2"></div>
+                                <p class="text-sm font-medium">4px</p>
+                                <p class="text-xs text-gray-500">XS</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-6 h-6 bg-lumi-blue-dark mx-auto mb-2"></div>
+                                <p class="text-sm font-medium">8px</p>
+                                <p class="text-xs text-gray-500">SM</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-8 h-8 bg-lumi-blue-dark mx-auto mb-2"></div>
+                                <p class="text-sm font-medium">16px</p>
+                                <p class="text-xs text-gray-500">MD</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-lumi-blue-dark mx-auto mb-2"></div>
+                                <p class="text-sm font-medium">24px</p>
+                                <p class="text-xs text-gray-500">LG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components Section -->
+        <section id="components" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">3. Biblioteca de Componentes</h2>
+                
+                <div class="space-y-8">
+                    <!-- Button Components -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Componentes de Botão</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-4">Variantes Necessárias</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                    <button class="btn bg-lumi-blue-dark text-white px-6 py-3 rounded-lg">Primary</button>
+                                    <button class="btn border-2 border-lumi-blue-dark text-lumi-blue-dark px-6 py-3 rounded-lg">Secondary</button>
+                                    <button class="btn bg-lumi-green-soft text-lumi-blue-dark px-6 py-3 rounded-lg">Success</button>
+                                    <button class="btn text-lumi-blue-dark px-6 py-3 rounded-lg hover:bg-lumi-gray-neutral">Ghost</button>
+                                </div>
+                                <div class="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                                    <p class="text-sm text-yellow-800">
+                                        <strong>Dica:</strong> Crie propriedades para Size (SM, MD, LG) e State (Default, Hover, Disabled)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Components -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Componentes de Card</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="border border-gray-200 p-6 rounded-xl shadow-sm">
+                                <div class="w-12 h-12 bg-lumi-blue-light rounded-xl flex items-center justify-center mb-4">
+                                    <i data-lucide="heart" class="w-6 h-6 text-lumi-blue-dark"></i>
+                                </div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-2">Service Card</h4>
+                                <p class="text-gray-700 text-sm">Exemplo de card de serviço</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-lumi-blue-light/20 to-white p-6 rounded-xl shadow-sm">
+                                <h4 class="font-semibold text-lumi-blue-dark mb-2">Featured Card</h4>
+                                <p class="text-gray-700 text-sm">Card com gradiente sutil</p>
+                            </div>
+                            <div class="border-l-4 border-lumi-green-soft bg-white p-6 rounded-xl shadow-sm">
+                                <h4 class="font-semibold text-lumi-blue-dark mb-2">Highlight Card</h4>
+                                <p class="text-gray-700 text-sm">Card com borda colorida</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                            <p class="text-sm text-green-800">
+                                <strong>Propriedades sugeridas:</strong> Variant (Basic, Featured, Highlight), Icon (Boolean), Shadow (None, SM, MD, LG)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Header Component -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Header Component</h3>
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-lumi-blue-dark rounded-lg flex items-center justify-center mr-3">
+                                        <span class="text-white font-bold">CL</span>
+                                    </div>
+                                    <span class="font-semibold text-lumi-blue-dark">Centro Lumi</span>
+                                </div>
+                                <div class="hidden md:flex space-x-6">
+                                    <span class="text-gray-700">Home</span>
+                                    <span class="text-gray-700">Sobre</span>
+                                    <span class="text-gray-700">Serviços</span>
+                                    <span class="text-gray-700">Contato</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="px-4 py-2 text-lumi-blue-dark">Ligar</button>
+                                    <button class="px-4 py-2 bg-lumi-green-soft text-lumi-blue-dark rounded-lg">WhatsApp</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 space-y-2">
+                            <p class="text-sm text-gray-700"><strong>Altura:</strong> 64px (16 * 4)</p>
+                            <p class="text-sm text-gray-700"><strong>Padding horizontal:</strong> 24px</p>
+                            <p class="text-sm text-gray-700"><strong>Estado:</strong> Fixed, z-index alto, sombra sutil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layouts Section -->
+        <section id="layouts" class="py-20 bg-lumi-gray-neutral">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">4. Estrutura de Layouts</h2>
+                
+                <div class="space-y-8">
+                    <!-- Homepage Layout -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Homepage Layout</h3>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                <div class="bg-gray-100 p-4 text-center font-semibold text-gray-700">Header (Fixed)</div>
+                                <div class="bg-gradient-to-br from-lumi-blue-light/10 to-lumi-green-soft/10 p-8 text-center">
+                                    <h4 class="font-bold text-lumi-blue-dark">Hero Section</h4>
+                                    <p class="text-sm text-gray-600">Grid 2 colunas, imagem + texto</p>
+                                </div>
+                                <div class="bg-white p-6 text-center border-t">
+                                    <h4 class="font-semibold text-lumi-blue-dark">About Section</h4>
+                                    <p class="text-sm text-gray-600">Grid 2 colunas, estatísticas</p>
+                                </div>
+                                <div class="bg-lumi-gray-neutral p-6 text-center border-t">
+                                    <h4 class="font-semibold text-lumi-blue-dark">Services Section</h4>
+                                    <p class="text-sm text-gray-600">Grid 4 colunas (desktop), 2 (tablet), 1 (mobile)</p>
+                                </div>
+                                <div class="bg-white p-6 text-center border-t">
+                                    <h4 class="font-semibold text-lumi-blue-dark">Methods Section</h4>
+                                    <p class="text-sm text-gray-600">2 cards lado a lado</p>
+                                </div>
+                                <div class="bg-lumi-blue-dark p-4 text-center text-white">Footer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid System -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Sistema de Grid</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-4">Desktop (1440px)</h4>
+                                <div class="grid grid-cols-12 gap-2 mb-4">
+                                    {Array.from({length: 12}, (_, i) => (
+                                        <div key={i} class="bg-lumi-blue-light/50 p-2 text-center text-xs font-medium text-lumi-blue-dark rounded">
+                                            {i + 1}
+                                        </div>
+                                    ))}
+                                </div>
+                                <p class="text-sm text-gray-600">Margin: 120px | Gutter: 24px | Max-width: 1280px</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-4">Tablet (768px)</h4>
+                                <div class="grid grid-cols-8 gap-2 mb-4">
+                                    {Array.from({length: 8}, (_, i) => (
+                                        <div key={i} class="bg-lumi-green-soft/50 p-2 text-center text-xs font-medium text-gray-700 rounded">
+                                            {i + 1}
+                                        </div>
+                                    ))}
+                                </div>
+                                <p class="text-sm text-gray-600">Margin: 24px | Gutter: 16px</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-4">Mobile (375px)</h4>
+                                <div class="grid grid-cols-4 gap-2 mb-4">
+                                    {Array.from({length: 4}, (_, i) => (
+                                        <div key={i} class="bg-lumi-gray-neutral p-2 text-center text-xs font-medium text-gray-700 rounded">
+                                            {i + 1}
+                                        </div>
+                                    ))}
+                                </div>
+                                <p class="text-sm text-gray-600">Margin: 16px | Gutter: 16px</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Export Section -->
+        <section id="export" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">6. Exportação e Entrega</h2>
+                
+                <div class="space-y-8">
+                    <!-- Assets Export -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Exportação de Assets</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-4">Ícones e Imagens</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                        Logo: SVG + PNG (múltiplas resoluções)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                        Ícones: SVG 24x24px
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                        Favicons: Multiple sizes
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                        Imagens: WebP + fallback
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-4">Especificações CSS</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                        Variáveis CSS das cores
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                        Font imports e definições
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                        Medidas e espaçamentos
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                        Classes utilitárias
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documentation -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Documentação</h3>
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="p-4 border border-gray-200 rounded-lg text-center">
+                                    <i data-lucide="file-text" class="w-8 h-8 text-lumi-blue-dark mx-auto mb-2"></i>
+                                    <h4 class="font-semibold text-lumi-blue-dark mb-2">Style Guide</h4>
+                                    <p class="text-sm text-gray-600">Cores, tipografia, componentes</p>
+                                </div>
+                                <div class="p-4 border border-gray-200 rounded-lg text-center">
+                                    <i data-lucide="layout" class="w-8 h-8 text-lumi-blue-dark mx-auto mb-2"></i>
+                                    <h4 class="font-semibold text-lumi-blue-dark mb-2">Layout Specs</h4>
+                                    <p class="text-sm text-gray-600">Grids, espaçamentos, breakpoints</p>
+                                </div>
+                                <div class="p-4 border border-gray-200 rounded-lg text-center">
+                                    <i data-lucide="code" class="w-8 h-8 text-lumi-blue-dark mx-auto mb-2"></i>
+                                    <h4 class="font-semibold text-lumi-blue-dark mb-2">Dev Handoff</h4>
+                                    <p class="text-sm text-gray-600">Código CSS, tokens, assets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Checklist -->
+                    <div class="card bg-lumi-green-soft/10 p-8 rounded-lg border border-lumi-green-soft/30">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Checklist Final</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-3">Design System</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> Cores configuradas
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> Tipografia importada
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> Componentes criados
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> Variantes definidas
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lumi-blue-dark mb-3">Layouts</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> Homepage completa
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> Páginas internas
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> Versões mobile
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> Protótipo funcional
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Resources -->
+        <section class="py-16 bg-gradient-to-br from-lumi-blue-light/5 to-lumi-green-soft/5">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-6">
+                    Recursos Complementares
+                </h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Baixe os recursos adicionais para acelerar seu trabalho no Figma.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="card bg-white p-6 rounded-lg shadow-lg">
+                        <i data-lucide="palette" class="w-8 h-8 text-lumi-blue-dark mx-auto mb-4"></i>
+                        <h3 class="font-semibold text-lumi-blue-dark mb-2">Color Palette</h3>
+                        <p class="text-sm text-gray-600 mb-4">Arquivo .ase com todas as cores</p>
+                        <button class="btn bg-lumi-blue-dark text-white w-full">Download</button>
+                    </div>
+                    <div class="card bg-white p-6 rounded-lg shadow-lg">
+                        <i data-lucide="type" class="w-8 h-8 text-lumi-blue-dark mx-auto mb-4"></i>
+                        <h3 class="font-semibold text-lumi-blue-dark mb-2">Font Files</h3>
+                        <p class="text-sm text-gray-600 mb-4">Poppins e Open Sans (.woff2)</p>
+                        <button class="btn bg-lumi-blue-dark text-white w-full">Download</button>
+                    </div>
+                    <div class="card bg-white p-6 rounded-lg shadow-lg">
+                        <i data-lucide="image" class="w-8 h-8 text-lumi-blue-dark mx-auto mb-4"></i>
+                        <h3 class="font-semibold text-lumi-blue-dark mb-2">Icon Library</h3>
+                        <p class="text-sm text-gray-600 mb-4">Todos os ícones em SVG</p>
+                        <button class="btn bg-lumi-blue-dark text-white w-full">Download</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-lumi-blue-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2024 Centro Lumi. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                if (mobileMenu) mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

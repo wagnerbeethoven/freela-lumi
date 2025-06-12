@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método ABA - Centro Lumi | Análise do Comportamento Aplicada</title>
+    <meta name="description" content="Conheça o método ABA (Applied Behavior Analysis) para TEA. Princípios, técnicas e benefícios da Análise do Comportamento Aplicada no Centro Lumi.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-lumi-blue-dark rounded">
+                        <div class="w-10 h-10 bg-lumi-blue-dark rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">CL</span>
+                        </div>
+                        <span class="ml-3 text-xl font-semibold text-lumi-blue-dark">Centro Lumi</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Sobre</a>
+                        <a href="services.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Serviços</a>
+                        
+                        <!-- Methods Dropdown -->
+                        <div class="relative group">
+                            <button class="px-3 py-2 rounded-md bg-lumi-blue-light text-lumi-blue-dark font-medium">Métodos</button>
+                            <div class="absolute left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                <div class="py-1">
+                                    <a href="teacch.html" class="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">TEACCH</a>
+                                    <a href="aba.html" class="flex items-center w-full text-left px-4 py-2 text-sm bg-lumi-blue-light text-lumi-blue-dark font-medium">ABA</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="team.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Equipe</a>
+                        <a href="courses.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Cursos</a>
+                        
+                        <!-- Content Dropdown -->
+                        <div class="relative group">
+                            <button class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Conteúdo</button>
+                            <div class="absolute left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                <div class="py-1">
+                                    <a href="search.html" class="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">
+                                        <i data-lucide="search" class="w-4 h-4 mr-2"></i>Buscar
+                                    </a>
+                                    <a href="archive.html" class="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">
+                                        <i data-lucide="archive" class="w-4 h-4 mr-2"></i>Arquivo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Contato</a>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons - Desktop -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <button class="btn btn-ghost text-lumi-blue-dark hover:bg-lumi-gray-neutral">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        Ligar
+                    </button>
+                    <a href="https://wa.me/5511987654321" target="_blank" class="btn bg-lumi-green-soft text-lumi-blue-dark hover:bg-green-200 px-4 py-2 min-h-[48px]">
+                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="btn btn-ghost text-lumi-blue-dark p-2 min-h-[48px] min-w-[48px]">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Home</a>
+                    <a href="about.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Sobre</a>
+                    <a href="services.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Serviços</a>
+                    <a href="teacch.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark ml-4">- TEACCH</a>
+                    <a href="aba.html" class="block w-full text-left px-3 py-2 rounded-md bg-lumi-blue-light text-lumi-blue-dark font-medium ml-4">- ABA</a>
+                    <a href="team.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Equipe</a>
+                    <a href="courses.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Cursos</a>
+                    <a href="search.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark ml-4">- Buscar</a>
+                    <a href="archive.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark ml-4">- Arquivo</a>
+                    <a href="contact.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Contato</a>
+                </div>
+                
+                <!-- Mobile CTA Buttons -->
+                <div class="px-2 pb-3 space-y-2 border-t border-gray-200 pt-3">
+                    <button class="btn w-full justify-center text-lumi-blue-dark hover:bg-lumi-gray-neutral min-h-[48px]">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        Ligar
+                    </button>
+                    <a href="https://wa.me/5511987654321" target="_blank" class="btn w-full bg-lumi-green-soft text-lumi-blue-dark hover:bg-green-200 min-h-[48px]">
+                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-12 bg-gradient-to-br from-lumi-green-soft/10 to-lumi-blue-light/10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <button onclick="history.back()" class="mb-6 btn btn-ghost text-lumi-blue-dark hover:bg-lumi-gray-neutral">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                    Voltar
+                </button>
+
+                <div class="space-y-6">
+                    <div class="badge bg-lumi-green-soft text-lumi-blue-dark">
+                        <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
+                        Método ABA
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold text-lumi-blue-dark leading-tight">
+                        Análise do Comportamento Aplicada
+                    </h1>
+
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        Conheça os princípios científicos da ABA e como utilizamos esta metodologia 
+                        para promover o desenvolvimento de habilidades e autonomia em pessoas com TEA.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is ABA Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <div>
+                            <div class="badge mb-4 bg-lumi-green-soft text-lumi-blue-dark">
+                                O que é ABA?
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-bold text-lumi-blue-dark mb-6">
+                                Ciência do Comportamento Humano
+                            </h2>
+                            <div class="space-y-6 text-gray-700 leading-relaxed">
+                                <p>
+                                    A Análise do Comportamento Aplicada (ABA) é uma ciência que utiliza 
+                                    princípios de aprendizagem para promover mudanças comportamentais 
+                                    socialmente significativas. É considerada o "padrão-ouro" para 
+                                    intervenção em TEA devido à sua base científica sólida.
+                                </p>
+                                <p>
+                                    Desenvolvida a partir dos trabalhos de B.F. Skinner, a ABA se concentra 
+                                    no entendimento de como o comportamento é aprendido e modificado através 
+                                    da interação com o ambiente.
+                                </p>
+                                <p>
+                                    No Centro Lumi, aplicamos os princípios da ABA de forma ética e 
+                                    individualizada, sempre respeitando a dignidade e autonomia da 
+                                    pessoa com TEA.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&crop=center" 
+                             alt="Sessão de ABA com criança" 
+                             class="w-full h-96 object-cover rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Principles -->
+        <section class="py-20 bg-lumi-gray-neutral">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="badge mb-4 bg-lumi-blue-light text-lumi-blue-dark">
+                        Princípios Fundamentais
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-lumi-blue-dark mb-6">
+                        Os 7 Pilares da ABA
+                    </h2>
+                    <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                        A eficácia da ABA baseia-se em princípios científicos rigorosamente aplicados 
+                        e validados por décadas de pesquisa.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Principle 1 -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="target" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Aplicada</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Foca em comportamentos socialmente significativos que fazem 
+                                diferença real na vida da pessoa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Principle 2 -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="activity" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Comportamental</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Trabalha com comportamentos observáveis e mensuráveis, 
+                                definidos de forma clara e objetiva.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Principle 3 -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="search" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Analítica</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Demonstra relação funcional entre a intervenção 
+                                e as mudanças comportamentais observadas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Principle 4 -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="flask-conical" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Tecnológica</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Procedimentos descritos de forma clara e precisa, 
+                                permitindo replicação por outros profissionais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Principle 5 -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="layers" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Sistemática</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Deriva de princípios básicos da análise do comportamento, 
+                                com base científica sólida.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Principle 6 -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="trending-up" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Efetiva</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Produz mudanças práticas e duradouras que melhoram 
+                                a qualidade de vida da pessoa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Principle 7 -->
+                    <div class="card bg-white shadow-lg md:col-span-2 lg:col-span-1 mx-auto">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="repeat" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Generalizada</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                As habilidades aprendidas são transferidas para 
+                                diferentes ambientes, pessoas e situações.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Techniques Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="badge mb-4 bg-lumi-green-soft text-lumi-blue-dark">
+                        Técnicas Utilizadas
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-lumi-blue-dark mb-6">
+                        Estratégias Práticas da ABA
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- DTT -->
+                    <div class="card bg-gradient-to-br from-lumi-green-soft/20 to-white shadow-xl">
+                        <div class="p-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mr-4">
+                                    <i data-lucide="zap" class="w-8 h-8 text-lumi-blue-dark"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-lumi-blue-dark">DTT</h3>
+                                    <p class="text-lumi-green-soft font-semibold">Discrete Trial Training</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                Ensino estruturado através de tentativas discretas, onde cada habilidade 
+                                é dividida em pequenos passos e ensinada de forma sistemática.
+                            </p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-lumi-green-soft mr-3"></i>
+                                    <span class="text-gray-700">Instrução clara e precisa</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-lumi-green-soft mr-3"></i>
+                                    <span class="text-gray-700">Resposta da criança</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-lumi-green-soft mr-3"></i>
+                                    <span class="text-gray-700">Consequência imediata</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-lumi-green-soft mr-3"></i>
+                                    <span class="text-gray-700">Intervalo entre tentativas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NET -->
+                    <div class="card bg-gradient-to-br from-lumi-blue-light/20 to-white shadow-xl">
+                        <div class="p-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-lumi-blue-light rounded-2xl flex items-center justify-center mr-4">
+                                    <i data-lucide="users" class="w-8 h-8 text-lumi-blue-dark"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-lumi-blue-dark">NET</h3>
+                                    <p class="text-lumi-blue-dark font-semibold">Natural Environment Training</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                Ensino naturalístico que ocorre durante atividades cotidianas, 
+                                aproveitando os interesses da criança para ensinar habilidades.
+                            </p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-lumi-green-soft mr-3"></i>
+                                    <span class="text-gray-700">Ambientes naturais</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-lumi-green-soft mr-3"></i>
+                                    <span class="text-gray-700">Motivação intrínseca</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-lumi-green-soft mr-3"></i>
+                                    <span class="text-gray-700">Generalização facilitada</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-lumi-green-soft mr-3"></i>
+                                    <span class="text-gray-700">Interação social natural</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Techniques -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card bg-white shadow-lg">
+                        <div class="p-6 text-center">
+                            <div class="w-12 h-12 bg-lumi-green-soft rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="award" class="w-6 h-6 text-lumi-blue-dark"></i>
+                            </div>
+                            <h4 class="font-bold text-lumi-blue-dark mb-2">Reforçamento</h4>
+                            <p class="text-sm text-gray-700">
+                                Uso sistemático de reforçadores para aumentar comportamentos apropriados.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white shadow-lg">
+                        <div class="p-6 text-center">
+                            <div class="w-12 h-12 bg-lumi-green-soft rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="minus-circle" class="w-6 h-6 text-lumi-blue-dark"></i>
+                            </div>
+                            <h4 class="font-bold text-lumi-blue-dark mb-2">Extinção</h4>
+                            <p class="text-sm text-gray-700">
+                                Redução de comportamentos inadequados através da remoção de reforçadores.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white shadow-lg">
+                        <div class="p-6 text-center">
+                            <div class="w-12 h-12 bg-lumi-green-soft rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="refresh-cw" class="w-6 h-6 text-lumi-blue-dark"></i>
+                            </div>
+                            <h4 class="font-bold text-lumi-blue-dark mb-2">Modelagem</h4>
+                            <p class="text-sm text-gray-700">
+                                Ensino gradual de comportamentos complexos através de aproximações sucessivas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-20 bg-lumi-gray-neutral">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="badge mb-4 bg-lumi-blue-light text-lumi-blue-dark">
+                        Benefícios da ABA
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-lumi-blue-dark mb-6">
+                        Resultados Comprovados
+                    </h2>
+                    <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                        Décadas de pesquisa demonstram a eficácia da ABA no desenvolvimento 
+                        de habilidades essenciais para pessoas com TEA.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-lumi-green-soft rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-lumi-blue-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lumi-blue-dark mb-2">Habilidades de Comunicação</h4>
+                                <p class="text-gray-700">Desenvolvimento da linguagem funcional e comunicação social efetiva.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-lumi-green-soft rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-lumi-blue-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lumi-blue-dark mb-2">Autonomia e Independência</h4>
+                                <p class="text-gray-700">Ensino de habilidades de vida diária e autocuidado.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-lumi-green-soft rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-lumi-blue-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lumi-blue-dark mb-2">Habilidades Sociais</h4>
+                                <p class="text-gray-700">Desenvolvimento de interações sociais apropriadas e relacionamentos.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-lumi-green-soft rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-lumi-blue-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lumi-blue-dark mb-2">Redução de Comportamentos Problema</h4>
+                                <p class="text-gray-700">Diminuição de comportamentos que interferem no aprendizado e convívio social.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-lumi-green-soft rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-lumi-blue-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lumi-blue-dark mb-2">Habilidades Acadêmicas</h4>
+                                <p class="text-gray-700">Preparação para inclusão escolar e desenvolvimento cognitivo.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-lumi-green-soft rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-lumi-blue-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lumi-blue-dark mb-2">Generalização</h4>
+                                <p class="text-gray-700">Transferência das habilidades aprendidas para diferentes contextos.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-lumi-green-soft rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-lumi-blue-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lumi-blue-dark mb-2">Qualidade de Vida</h4>
+                                <p class="text-gray-700">Melhoria significativa no bem-estar geral da pessoa e família.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-lumi-green-soft rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-lumi-blue-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lumi-blue-dark mb-2">Evidência Científica</h4>
+                                <p class="text-gray-700">Método com maior respaldo científico para intervenção em TEA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="badge mb-4 bg-lumi-green-soft text-lumi-blue-dark">
+                        Casos de Sucesso
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-lumi-blue-dark mb-6">
+                        Transformações Reais
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Case Study 1 -->
+                    <div class="card bg-gradient-to-br from-lumi-green-soft/10 to-white shadow-lg">
+                        <div class="p-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-lumi-green-soft rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-lumi-blue-dark font-bold">M.</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lumi-blue-dark">Miguel, 5 anos</h4>
+                                    <p class="text-gray-600 text-sm">Diagnóstico: TEA Nível 2</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-semibold text-lumi-blue-dark mb-2">Desafios Iniciais:</h5>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Ausência de linguagem funcional</li>
+                                        <li>• Comportamentos autolesivos</li>
+                                        <li>• Dificuldades de interação social</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h5 class="font-semibold text-lumi-blue-dark mb-2">Resultados após 18 meses:</h5>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Vocabulário de 200+ palavras</li>
+                                        <li>• Redução de 90% dos comportamentos problema</li>
+                                        <li>• Iniciação de interações sociais</li>
+                                        <li>• Preparação para inclusão escolar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="card bg-gradient-to-br from-lumi-blue-light/10 to-white shadow-lg">
+                        <div class="p-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-lumi-blue-light rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-lumi-blue-dark font-bold">A.</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lumi-blue-dark">Ana, 8 anos</h4>
+                                    <p class="text-gray-600 text-sm">Diagnóstico: TEA Nível 1</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-semibold text-lumi-blue-dark mb-2">Desafios Iniciais:</h5>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Dificuldades acadêmicas</li>
+                                        <li>• Ansiedade social</li>
+                                        <li>• Problemas de organização</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h5 class="font-semibold text-lumi-blue-dark mb-2">Resultados após 12 meses:</h5>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Melhoria significativa nas notas</li>
+                                        <li>• Participação em atividades de grupo</li>
+                                        <li>• Desenvolvimento de amizades</li>
+                                        <li>• Autonomia em tarefas escolares</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-gradient-to-br from-lumi-green-soft/5 to-lumi-blue-light/5">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-6">
+                    Comece a Jornada ABA
+                </h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Descubra como a Análise do Comportamento Aplicada pode transformar 
+                    a vida da sua família. Agende uma avaliação gratuita com nossa equipe especializada.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn btn-lg bg-lumi-green-soft text-lumi-blue-dark hover:bg-green-200 px-8 py-4">
+                        <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                        Agendar Avaliação
+                    </a>
+                    <a href="courses.html" class="btn btn-lg btn-outline border-lumi-blue-dark text-lumi-blue-dark hover:bg-lumi-blue-dark hover:text-white px-8 py-4">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 mr-2"></i>
+                        Cursos de ABA
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-lumi-blue-dark text-white">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4">
+                            <span class="text-lumi-blue-dark font-bold text-xl">CL</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Centro Lumi</h3>
+                            <p class="text-lumi-blue-light text-sm">Especialistas em TEA</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lumi-blue-light/80 mb-6 leading-relaxed">
+                        Oferecemos cuidado especializado e métodos cientificamente comprovados 
+                        para pessoas com Transtorno do Espectro Autista há mais de 15 anos.
+                    </p>
+
+                    <!-- Social Media -->
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/centrolumi" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 bg-lumi-blue-light/20 hover:bg-lumi-blue-light/40 rounded-lg flex items-center justify-center transition-colors duration-200">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://instagram.com/centrolumi" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 bg-lumi-blue-light/20 hover:bg-lumi-blue-light/40 rounded-lg flex items-center justify-center transition-colors duration-200">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://youtube.com/centrolumi" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 bg-lumi-blue-light/20 hover:bg-lumi-blue-light/40 rounded-lg flex items-center justify-center transition-colors duration-200">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Links Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Sobre Nós</a></li>
+                        <li><a href="services.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Serviços</a></li>
+                        <li><a href="teacch.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Métodos TEACCH</a></li>
+                        <li><a href="aba.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Métodos ABA</a></li>
+                        <li><a href="team.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Nossa Equipe</a></li>
+                        <li><a href="courses.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Cursos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Recursos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="archive.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Arquivo de Conteúdo</a></li>
+                        <li><a href="search.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Buscar Artigos</a></li>
+                        <li><a href="video.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Vídeos Educativos</a></li>
+                        <li><a href="contact.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contato</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-lumi-blue-light mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-lumi-blue-light/80 text-sm">
+                                    Rua das Flores, 123<br>
+                                    Centro - São Paulo/SP<br>
+                                    CEP: 01234-567
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-lumi-blue-light flex-shrink-0"></i>
+                            <a href="tel:+551134567890" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                                (11) 3456-7890
+                            </a>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-lumi-blue-light flex-shrink-0"></i>
+                            <a href="mailto:contato@centrolumi.com.br" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                                contato@centrolumi.com.br
+                            </a>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-lumi-green-soft flex-shrink-0"></i>
+                            <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer"
+                               class="text-lumi-green-soft hover:text-green-200 transition-colors duration-200 text-sm">
+                                WhatsApp: (11) 98765-4321
+                            </a>
+                        </div>
+
+                        <div class="flex items-start space-x-3 pt-2">
+                            <i data-lucide="clock" class="w-5 h-5 text-lumi-blue-light mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-lumi-blue-light/80 text-sm">
+                                    Segunda a Sexta: 8h às 18h<br>
+                                    Sábado: 8h às 12h
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-lumi-blue-light/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-center md:text-left">
+                        <p class="text-lumi-blue-light/80 text-sm">
+                            © 2024 Centro Lumi. Todos os direitos reservados.
+                        </p>
+                        <p class="text-lumi-blue-light/60 text-xs mt-1">
+                            CNPJ: 12.345.678/0001-90 | CRM: 12345
+                        </p>
+                    </div>
+
+                    <!-- Legal Links -->
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="privacy-policy.html" class="flex items-center space-x-2 text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Política de Privacidade</span>
+                        </a>
+                        <a href="terms-of-use.html" class="flex items-center space-x-2 text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Termos de Uso</span>
+                        </a>
+                        <a href="style-guide.html" class="flex items-center space-x-2 text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                            <i data-lucide="palette" class="w-4 h-4"></i>
+                            <span>Guia de Interface</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Estilo - Centro Lumi | Design System</title>
+    <meta name="description" content="Guia completo de estilo e design system do Centro Lumi com cores, tipografia, componentes e padrões de interface.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-lumi-blue-dark rounded">
+                        <div class="w-10 h-10 bg-lumi-blue-dark rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">CL</span>
+                        </div>
+                        <span class="ml-3 text-xl font-semibold text-lumi-blue-dark">Centro Lumi</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Sobre</a>
+                        <a href="services.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Serviços</a>
+                        <a href="style-guide.html" class="px-3 py-2 rounded-md bg-lumi-blue-light text-lumi-blue-dark font-medium">Guia</a>
+                        <a href="contact.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Contato</a>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons - Desktop -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <button class="btn btn-ghost text-lumi-blue-dark hover:bg-lumi-gray-neutral">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        Ligar
+                    </button>
+                    <a href="https://wa.me/5511987654321" target="_blank" class="btn bg-lumi-green-soft text-lumi-blue-dark hover:bg-green-200 px-4 py-2 min-h-[48px]">
+                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="btn btn-ghost text-lumi-blue-dark p-2 min-h-[48px] min-w-[48px]">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-12 bg-gradient-to-br from-lumi-blue-light/10 to-lumi-green-soft/10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-6">
+                    <div class="badge bg-lumi-blue-light text-lumi-blue-dark">
+                        <i data-lucide="palette" class="w-4 h-4 mr-2"></i>
+                        Design System
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold text-lumi-blue-dark leading-tight">
+                        Guia de Estilo Centro Lumi
+                    </h1>
+
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        Documentação completa do design system do Centro Lumi, incluindo cores, 
+                        tipografia, componentes e padrões de interface para garantir consistência visual.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="py-8 bg-white border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <nav class="flex space-x-8 overflow-x-auto">
+                    <a href="#colors" class="whitespace-nowrap py-2 px-1 border-b-2 border-lumi-blue-dark text-lumi-blue-dark font-medium">Cores</a>
+                    <a href="#typography" class="whitespace-nowrap py-2 px-1 border-b-2 border-transparent text-gray-700 hover:text-lumi-blue-dark hover:border-lumi-blue-light">Tipografia</a>
+                    <a href="#components" class="whitespace-nowrap py-2 px-1 border-b-2 border-transparent text-gray-700 hover:text-lumi-blue-dark hover:border-lumi-blue-light">Componentes</a>
+                    <a href="#layout" class="whitespace-nowrap py-2 px-1 border-b-2 border-transparent text-gray-700 hover:text-lumi-blue-dark hover:border-lumi-blue-light">Layout</a>
+                    <a href="#icons" class="whitespace-nowrap py-2 px-1 border-b-2 border-transparent text-gray-700 hover:text-lumi-blue-dark hover:border-lumi-blue-light">Ícones</a>
+                    <a href="#accessibility" class="whitespace-nowrap py-2 px-1 border-b-2 border-transparent text-gray-700 hover:text-lumi-blue-dark hover:border-lumi-blue-light">Acessibilidade</a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Colors Section -->
+        <section id="colors" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">Paleta de Cores</h2>
+                
+                <!-- Primary Colors -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Cores Principais</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                        <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+                            <div class="h-24 bg-lumi-blue-dark"></div>
+                            <div class="p-4">
+                                <h4 class="font-semibold text-gray-800">Azul Escuro</h4>
+                                <p class="text-sm text-gray-600 mt-1">#005073</p>
+                                <p class="text-xs text-gray-500 mt-1">rgb(0, 80, 115)</p>
+                                <div class="mt-2">
+                                    <span class="badge bg-lumi-gray-neutral text-gray-700 text-xs">Principal</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+                            <div class="h-24 bg-lumi-blue-light"></div>
+                            <div class="p-4">
+                                <h4 class="font-semibold text-gray-800">Azul Claro</h4>
+                                <p class="text-sm text-gray-600 mt-1">#A2D5F2</p>
+                                <p class="text-xs text-gray-500 mt-1">rgb(162, 213, 242)</p>
+                                <div class="mt-2">
+                                    <span class="badge bg-lumi-gray-neutral text-gray-700 text-xs">Secundária</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+                            <div class="h-24 bg-lumi-green-soft"></div>
+                            <div class="p-4">
+                                <h4 class="font-semibold text-gray-800">Verde Suave</h4>
+                                <p class="text-sm text-gray-600 mt-1">#A7D7C5</p>
+                                <p class="text-xs text-gray-500 mt-1">rgb(167, 215, 197)</p>
+                                <div class="mt-2">
+                                    <span class="badge bg-lumi-gray-neutral text-gray-700 text-xs">Accent</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+                            <div class="h-24 bg-lumi-gray-neutral"></div>
+                            <div class="p-4">
+                                <h4 class="font-semibold text-gray-800">Cinza Neutro</h4>
+                                <p class="text-sm text-gray-600 mt-1">#F7F7F7</p>
+                                <p class="text-xs text-gray-500 mt-1">rgb(247, 247, 247)</p>
+                                <div class="mt-2">
+                                    <span class="badge bg-lumi-gray-neutral text-gray-700 text-xs">Neutro</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white shadow-lg rounded-lg overflow-hidden border-2 border-gray-300">
+                            <div class="h-24 bg-white"></div>
+                            <div class="p-4">
+                                <h4 class="font-semibold text-gray-800">Branco</h4>
+                                <p class="text-sm text-gray-600 mt-1">#FFFFFF</p>
+                                <p class="text-xs text-gray-500 mt-1">rgb(255, 255, 255)</p>
+                                <div class="mt-2">
+                                    <span class="badge bg-lumi-gray-neutral text-gray-700 text-xs">Base</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section id="typography" class="py-20 bg-lumi-gray-neutral">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">Tipografia</h2>
+                
+                <!-- Font Families -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Famílias Tipográficas</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="card bg-white p-8 rounded-lg shadow-lg">
+                            <h4 class="text-2xl font-bold text-lumi-blue-dark mb-4" style="font-family: 'Poppins', sans-serif;">Poppins</h4>
+                            <p class="text-gray-700 mb-4">Família tipográfica para títulos e elementos de destaque</p>
+                            <div class="space-y-2">
+                                <p style="font-family: 'Poppins', sans-serif; font-weight: 400;">Regular 400</p>
+                                <p style="font-family: 'Poppins', sans-serif; font-weight: 500;">Medium 500</p>
+                                <p style="font-family: 'Poppins', sans-serif; font-weight: 600;">SemiBold 600</p>
+                                <p style="font-family: 'Poppins', sans-serif; font-weight: 700;">Bold 700</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card bg-white p-8 rounded-lg shadow-lg">
+                            <h4 class="text-2xl font-semibold text-lumi-blue-dark mb-4" style="font-family: 'Open Sans', sans-serif;">Open Sans</h4>
+                            <p class="text-gray-700 mb-4">Família tipográfica para corpo de texto e elementos secundários</p>
+                            <div class="space-y-2">
+                                <p style="font-family: 'Open Sans', sans-serif; font-weight: 400;">Regular 400</p>
+                                <p style="font-family: 'Open Sans', sans-serif; font-weight: 500;">Medium 500</p>
+                                <p style="font-family: 'Open Sans', sans-serif; font-weight: 600;">SemiBold 600</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typography Scale -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Escala Tipográfica</h3>
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <div class="space-y-6">
+                            <div>
+                                <h1 class="mb-2">Heading 1 - 40px/48px</h1>
+                                <p class="text-sm text-gray-600">font-family: 'Poppins'; font-weight: 700; line-height: 1.2;</p>
+                            </div>
+                            <div>
+                                <h2 class="mb-2">Heading 2 - 32px/40px</h2>
+                                <p class="text-sm text-gray-600">font-family: 'Poppins'; font-weight: 600; line-height: 1.3;</p>
+                            </div>
+                            <div>
+                                <h3 class="mb-2">Heading 3 - 24px/32px</h3>
+                                <p class="text-sm text-gray-600">font-family: 'Poppins'; font-weight: 600; line-height: 1.4;</p>
+                            </div>
+                            <div>
+                                <h4 class="mb-2">Heading 4 - 20px/28px</h4>
+                                <p class="text-sm text-gray-600">font-family: 'Poppins'; font-weight: 500; line-height: 1.4;</p>
+                            </div>
+                            <div>
+                                <p class="mb-2">Body Text - 16px/24px</p>
+                                <p class="text-sm text-gray-600">font-family: 'Open Sans'; font-weight: 400; line-height: 1.6;</p>
+                            </div>
+                            <div>
+                                <p class="text-sm mb-2">Small Text - 14px/20px</p>
+                                <p class="text-sm text-gray-600">font-family: 'Open Sans'; font-weight: 400; line-height: 1.5;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components Section -->
+        <section id="components" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">Componentes</h2>
+                
+                <!-- Buttons -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Botões</h3>
+                    <div class="card bg-lumi-gray-neutral/50 p-8 rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-4">Primário</h4>
+                                <div class="space-y-3">
+                                    <button class="btn bg-lumi-blue-dark text-white hover:bg-blue-800 w-full">Botão Primário</button>
+                                    <button class="btn bg-lumi-blue-dark text-white hover:bg-blue-800 w-full" disabled>Desabilitado</button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-4">Secundário</h4>
+                                <div class="space-y-3">
+                                    <button class="btn btn-outline border-lumi-blue-dark text-lumi-blue-dark hover:bg-lumi-blue-dark hover:text-white w-full">Secundário</button>
+                                    <button class="btn btn-outline border-gray-300 text-gray-400 w-full" disabled>Desabilitado</button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-4">Sucesso</h4>
+                                <div class="space-y-3">
+                                    <button class="btn bg-lumi-green-soft text-lumi-blue-dark hover:bg-green-200 w-full">Sucesso</button>
+                                    <button class="btn bg-gray-200 text-gray-400 w-full" disabled>Desabilitado</button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-4">Ghost</h4>
+                                <div class="space-y-3">
+                                    <button class="btn btn-ghost text-lumi-blue-dark hover:bg-lumi-gray-neutral w-full">Ghost</button>
+                                    <button class="btn btn-ghost text-gray-400 w-full" disabled>Desabilitado</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Badges</h3>
+                    <div class="card bg-lumi-gray-neutral/50 p-8 rounded-lg">
+                        <div class="flex flex-wrap gap-4">
+                            <div class="badge bg-lumi-blue-dark text-white">Primário</div>
+                            <div class="badge bg-lumi-blue-light text-lumi-blue-dark">Secundário</div>
+                            <div class="badge bg-lumi-green-soft text-lumi-blue-dark">Sucesso</div>
+                            <div class="badge bg-lumi-gray-neutral text-gray-700">Neutro</div>
+                            <div class="badge bg-red-100 text-red-800">Erro</div>
+                            <div class="badge bg-yellow-100 text-yellow-800">Aviso</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessibility Section -->
+        <section id="accessibility" class="py-20 bg-lumi-gray-neutral">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-8">Acessibilidade</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Contraste de Cores</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-3 bg-lumi-blue-dark text-white rounded">
+                                <span>Texto branco em azul escuro</span>
+                                <span class="badge bg-green-600 text-white">AAA</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-lumi-blue-light text-lumi-blue-dark rounded">
+                                <span>Texto azul escuro em azul claro</span>
+                                <span class="badge bg-green-600 text-white">AA</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-lumi-green-soft text-lumi-blue-dark rounded">
+                                <span>Texto azul escuro em verde suave</span>
+                                <span class="badge bg-green-600 text-white">AA</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-lumi-blue-dark mb-6">Diretrizes WCAG</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Contraste mínimo 4.5:1 para texto normal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Área mínima de toque: 48x48px</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Navegação por teclado completa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Labels descritivos e alt text</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Estados de foco visíveis</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Guidelines -->
+        <section class="py-16 bg-gradient-to-br from-lumi-blue-light/5 to-lumi-green-soft/5">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-6">
+                    Como Usar Este Guia
+                </h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Este design system foi criado para garantir consistência visual e 
+                    uma experiência acessível em todos os pontos de contato do Centro Lumi.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="figma-documentation.html" class="btn btn-lg bg-lumi-blue-dark text-white hover:bg-blue-800 px-8 py-4">
+                        <i data-lucide="file-text" class="w-5 h-5 mr-2"></i>
+                        Documentação Figma
+                    </a>
+                    <a href="index.html" class="btn btn-lg btn-outline border-lumi-blue-dark text-lumi-blue-dark hover:bg-lumi-blue-dark hover:text-white px-8 py-4">
+                        <i data-lucide="home" class="w-5 h-5 mr-2"></i>
+                        Ver Implementação
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-lumi-blue-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2024 Centro Lumi. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                if (mobileMenu) mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

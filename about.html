@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Centro Lumi | Nossa História e Missão</title>
+    <meta name="description" content="Conheça a história do Centro Lumi, nossa missão, visão, valores e a equipe de especialistas em TEA que transformam vidas há mais de 15 anos.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-lumi-blue-dark rounded">
+                        <div class="w-10 h-10 bg-lumi-blue-dark rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">CL</span>
+                        </div>
+                        <span class="ml-3 text-xl font-semibold text-lumi-blue-dark">Centro Lumi</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md bg-lumi-blue-light text-lumi-blue-dark font-medium">Sobre</a>
+                        <a href="services.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Serviços</a>
+                        
+                        <!-- Methods Dropdown -->
+                        <div class="relative group">
+                            <button class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Métodos</button>
+                            <div class="absolute left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                <div class="py-1">
+                                    <a href="teacch.html" class="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">TEACCH</a>
+                                    <a href="aba.html" class="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">ABA</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="team.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Equipe</a>
+                        <a href="courses.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Cursos</a>
+                        
+                        <!-- Content Dropdown -->
+                        <div class="relative group">
+                            <button class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Conteúdo</button>
+                            <div class="absolute left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                <div class="py-1">
+                                    <a href="search.html" class="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">
+                                        <i data-lucide="search" class="w-4 h-4 mr-2"></i>Buscar
+                                    </a>
+                                    <a href="archive.html" class="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">
+                                        <i data-lucide="archive" class="w-4 h-4 mr-2"></i>Arquivo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Contato</a>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons - Desktop -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <button class="btn btn-ghost text-lumi-blue-dark hover:bg-lumi-gray-neutral">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        Ligar
+                    </button>
+                    <a href="https://wa.me/5511987654321" target="_blank" class="btn bg-lumi-green-soft text-lumi-blue-dark hover:bg-green-200 px-4 py-2 min-h-[48px]">
+                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="btn btn-ghost text-lumi-blue-dark p-2 min-h-[48px] min-w-[48px]">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Home</a>
+                    <a href="about.html" class="block w-full text-left px-3 py-2 rounded-md bg-lumi-blue-light text-lumi-blue-dark font-medium">Sobre</a>
+                    <a href="services.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Serviços</a>
+                    <a href="teacch.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark ml-4">- TEACCH</a>
+                    <a href="aba.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark ml-4">- ABA</a>
+                    <a href="team.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Equipe</a>
+                    <a href="courses.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Cursos</a>
+                    <a href="search.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark ml-4">- Buscar</a>
+                    <a href="archive.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark ml-4">- Arquivo</a>
+                    <a href="contact.html" class="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-lumi-gray-neutral hover:text-lumi-blue-dark">Contato</a>
+                </div>
+                
+                <!-- Mobile CTA Buttons -->
+                <div class="px-2 pb-3 space-y-2 border-t border-gray-200 pt-3">
+                    <button class="btn w-full justify-center text-lumi-blue-dark hover:bg-lumi-gray-neutral min-h-[48px]">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        Ligar
+                    </button>
+                    <a href="https://wa.me/5511987654321" target="_blank" class="btn w-full bg-lumi-green-soft text-lumi-blue-dark hover:bg-green-200 min-h-[48px]">
+                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-12 bg-gradient-to-br from-lumi-blue-light/10 to-lumi-green-soft/10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <button onclick="history.back()" class="mb-6 btn btn-ghost text-lumi-blue-dark hover:bg-lumi-gray-neutral">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                    Voltar
+                </button>
+
+                <div class="space-y-6">
+                    <div class="badge bg-lumi-green-soft text-lumi-blue-dark">
+                        <i data-lucide="heart" class="w-4 h-4 mr-2"></i>
+                        Nossa História
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold text-lumi-blue-dark leading-tight">
+                        Transformando Vidas há mais de 15 Anos
+                    </h1>
+
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        Conheça a história do Centro Lumi, nossa missão, visão e valores que nos 
+                        guiam no cuidado especializado para pessoas com Transtorno do Espectro Autista.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <div>
+                            <div class="badge mb-4 bg-lumi-blue-light text-lumi-blue-dark">
+                                Nossa História
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-bold text-lumi-blue-dark mb-6">
+                                O Início de Uma Missão
+                            </h2>
+                            <div class="space-y-6 text-gray-700 leading-relaxed">
+                                <p>
+                                    O Centro Lumi nasceu em 2009 do sonho de três profissionais da área da saúde 
+                                    que acreditavam no potencial de cada pessoa com Transtorno do Espectro Autista. 
+                                    Dra. Ana Carolina Lima, psicóloga, Dr. Roberto Santos, analista do comportamento, 
+                                    e Dra. Maria Fernanda, fonoaudióloga, uniram suas expertises para criar um 
+                                    centro de referência em TEA.
+                                </p>
+                                <p>
+                                    Começamos com uma pequena clínica de 80m² no centro de São Paulo, atendendo 
+                                    apenas 10 famílias. Nossa abordagem diferenciada, baseada nos métodos TEACCH 
+                                    e ABA, rapidamente ganhou reconhecimento pela eficácia e pelo cuidado humanizado.
+                                </p>
+                                <p>
+                                    Hoje, após mais de 15 anos, o Centro Lumi é uma referência nacional em 
+                                    atendimento especializado para TEA, com duas unidades modernas e uma equipe 
+                                    multidisciplinar de mais de 25 profissionais especializados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=center" 
+                             alt="Fachada do Centro Lumi" 
+                             class="w-full h-96 object-cover rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission, Vision, Values -->
+        <section class="py-20 bg-lumi-gray-neutral">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="badge mb-4 bg-lumi-green-soft text-lumi-blue-dark">
+                        Nossos Valores
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-lumi-blue-dark mb-6">
+                        Missão, Visão e Valores
+                    </h2>
+                    <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                        Os princípios que norteiam nosso trabalho e nossa dedicação 
+                        ao cuidado especializado em TEA.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Mission -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-blue-dark rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="target" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Nossa Missão</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Promover o desenvolvimento, autonomia e qualidade de vida de pessoas 
+                                com TEA através de métodos cientificamente comprovados, oferecendo 
+                                atendimento humanizado e suporte integral às famílias.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-green-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="eye" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Nossa Visão</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Ser referência nacional em atendimento especializado para TEA, 
+                                contribuindo para uma sociedade mais inclusiva e consciente sobre 
+                                o espectro autista.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Values -->
+                    <div class="card bg-white shadow-lg">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-lumi-blue-light rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="heart" class="w-8 h-8 text-lumi-blue-dark"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-lumi-blue-dark mb-4">Nossos Valores</h3>
+                            <div class="text-gray-700 leading-relaxed space-y-2">
+                                <p>• Respeito à individualidade</p>
+                                <p>• Excelência técnica</p>
+                                <p>• Ética profissional</p>
+                                <p>• Trabalho em equipe</p>
+                                <p>• Inovação constante</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="badge mb-4 bg-lumi-blue-light text-lumi-blue-dark">
+                        Nossa Trajetória
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-lumi-blue-dark mb-6">
+                        Marcos Importantes
+                    </h2>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Timeline Item 1 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-lumi-blue-dark rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">1</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-lg font-bold text-lumi-blue-dark mr-4">2009</h3>
+                                <div class="badge bg-lumi-green-soft text-lumi-blue-dark">Fundação</div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Abertura do Centro Lumi com 80m² e equipe de 3 profissionais. 
+                                Início do atendimento com foco nos métodos TEACCH e ABA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-lumi-blue-dark rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">2</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-lg font-bold text-lumi-blue-dark mr-4">2012</h3>
+                                <div class="badge bg-lumi-green-soft text-lumi-blue-dark">Expansão</div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Primeira expansão para 200m² e contratação de mais 5 profissionais. 
+                                Início dos programas de orientação familiar estruturada.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-lumi-blue-dark rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">3</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-lg font-bold text-lumi-blue-dark mr-4">2015</h3>
+                                <div class="badge bg-lumi-green-soft text-lumi-blue-dark">Certificação</div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Obtenção das primeiras certificações internacionais TEACCH e ABA. 
+                                Reconhecimento como centro de referência em São Paulo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-lumi-blue-dark rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">4</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-lg font-bold text-lumi-blue-dark mr-4">2018</h3>
+                                <div class="badge bg-lumi-green-soft text-lumi-blue-dark">Instituto</div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Criação do Instituto de Formação Centro Lumi para capacitação 
+                                de profissionais em métodos especializados para TEA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-lumi-blue-dark rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">5</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-lg font-bold text-lumi-blue-dark mr-4">2021</h3>
+                                <div class="badge bg-lumi-green-soft text-lumi-blue-dark">Nova Unidade</div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Inauguração da segunda unidade na Zona Sul de São Paulo 
+                                com 400m² e tecnologias de ponta para atendimento.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 6 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-lumi-green-soft rounded-full flex items-center justify-center">
+                                <span class="text-lumi-blue-dark font-bold">6</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-lg font-bold text-lumi-blue-dark mr-4">2024</h3>
+                                <div class="badge bg-lumi-blue-light text-lumi-blue-dark">Presente</div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Mais de 500 famílias atendidas, 25+ profissionais especializados 
+                                e reconhecimento como referência nacional em TEA.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-gradient-to-br from-lumi-blue-dark/5 to-lumi-green-soft/5">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-lumi-blue-dark mb-6">
+                    Faça Parte da Nossa História
+                </h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Conheça nossa equipe especializada e descubra como podemos ajudar 
+                    no desenvolvimento e bem-estar da sua família.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="team.html" class="btn btn-lg bg-lumi-blue-dark hover:bg-blue-800 text-white px-8 py-4">
+                        <i data-lucide="users" class="w-5 h-5 mr-2"></i>
+                        Conheça Nossa Equipe
+                    </a>
+                    <a href="contact.html" class="btn btn-lg btn-outline border-lumi-blue-dark text-lumi-blue-dark hover:bg-lumi-blue-dark hover:text-white px-8 py-4">
+                        <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                        Agendar Consulta
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-lumi-blue-dark text-white">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4">
+                            <span class="text-lumi-blue-dark font-bold text-xl">CL</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Centro Lumi</h3>
+                            <p class="text-lumi-blue-light text-sm">Especialistas em TEA</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lumi-blue-light/80 mb-6 leading-relaxed">
+                        Oferecemos cuidado especializado e métodos cientificamente comprovados 
+                        para pessoas com Transtorno do Espectro Autista há mais de 15 anos.
+                    </p>
+
+                    <!-- Social Media -->
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/centrolumi" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 bg-lumi-blue-light/20 hover:bg-lumi-blue-light/40 rounded-lg flex items-center justify-center transition-colors duration-200">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://instagram.com/centrolumi" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 bg-lumi-blue-light/20 hover:bg-lumi-blue-light/40 rounded-lg flex items-center justify-center transition-colors duration-200">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://youtube.com/centrolumi" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 bg-lumi-blue-light/20 hover:bg-lumi-blue-light/40 rounded-lg flex items-center justify-center transition-colors duration-200">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Links Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Sobre Nós</a></li>
+                        <li><a href="services.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Serviços</a></li>
+                        <li><a href="teacch.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Métodos TEACCH</a></li>
+                        <li><a href="aba.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Métodos ABA</a></li>
+                        <li><a href="team.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Nossa Equipe</a></li>
+                        <li><a href="courses.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Cursos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Recursos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="archive.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Arquivo de Conteúdo</a></li>
+                        <li><a href="search.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Buscar Artigos</a></li>
+                        <li><a href="video.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Vídeos Educativos</a></li>
+                        <li><a href="contact.html" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contato</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-lumi-blue-light mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-lumi-blue-light/80 text-sm">
+                                    Rua das Flores, 123<br>
+                                    Centro - São Paulo/SP<br>
+                                    CEP: 01234-567
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-lumi-blue-light flex-shrink-0"></i>
+                            <a href="tel:+551134567890" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                                (11) 3456-7890
+                            </a>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-lumi-blue-light flex-shrink-0"></i>
+                            <a href="mailto:contato@centrolumi.com.br" class="text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                                contato@centrolumi.com.br
+                            </a>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-lumi-green-soft flex-shrink-0"></i>
+                            <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer"
+                               class="text-lumi-green-soft hover:text-green-200 transition-colors duration-200 text-sm">
+                                WhatsApp: (11) 98765-4321
+                            </a>
+                        </div>
+
+                        <div class="flex items-start space-x-3 pt-2">
+                            <i data-lucide="clock" class="w-5 h-5 text-lumi-blue-light mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-lumi-blue-light/80 text-sm">
+                                    Segunda a Sexta: 8h às 18h<br>
+                                    Sábado: 8h às 12h
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-lumi-blue-light/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-center md:text-left">
+                        <p class="text-lumi-blue-light/80 text-sm">
+                            © 2024 Centro Lumi. Todos os direitos reservados.
+                        </p>
+                        <p class="text-lumi-blue-light/60 text-xs mt-1">
+                            CNPJ: 12.345.678/0001-90 | CRM: 12345
+                        </p>
+                    </div>
+
+                    <!-- Legal Links -->
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="privacy-policy.html" class="flex items-center space-x-2 text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Política de Privacidade</span>
+                        </a>
+                        <a href="terms-of-use.html" class="flex items-center space-x-2 text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Termos de Uso</span>
+                        </a>
+                        <a href="style-guide.html" class="flex items-center space-x-2 text-lumi-blue-light/80 hover:text-white transition-colors duration-200 text-sm">
+                            <i data-lucide="palette" class="w-4 h-4"></i>
+                            <span>Guia de Interface</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
